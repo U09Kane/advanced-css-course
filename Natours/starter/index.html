@@ -270,7 +270,7 @@
       Footer Stuff
     </footer>
     <div class="popup" id="popup">
-      <div class="popup__content">
+      <div class="popup__content" onclick="null">
         <div class="popup__left">
           <img src="./img/nat-8.jpg" alt="tour photo 1" class="popup__img">
           <img src="./img/nat-9.jpg" alt="tour photo 2" class="popup__img">
@@ -280,12 +280,18 @@
           <h2 class="heading-secondary u-margin-bottom-small">Start Booking Now</h2>
           <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read terms before booking</h3>
           <p class="popup__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At risus viverra adipiscing at in tellus integer. Ut diam quam nulla porttitor massa id. Gravida in fermentum et sollicitudin. Mattis rhoncus urna neque viverra justo nec ultrices dui sapien. Mi ipsum faucibus vitae aliquet. Suspendisse faucibus interdum posuere lorem ipsum dolor sit amet consectetur. Velit aliquet sagittis id consectetur purus. Aliquet eget sit amet tellus cras adipiscing enim eu turpis. Integer quis auctor elit sed. Et malesuada fames ac turpis egestas. Nisl pretium fusce id velit ut tortor pretium viverra.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At risus viverra adipiscing at in tellus integer. Ut diam quam nulla porttitor massa id. Gravida in fermentum et sollicitudin. Mattis rhoncus urna neque viverra justo nec ultrices dui sapien. Mi ipsum faucibus vitae aliquet. Suspendisse faucibus interdum posuere lorem ipsum dolor sit amet consectetur. Velit aliquet sagittis id consectetur purus. Aliquet eget sit amet tellus cras adipiscing enim eu turpis. Integer quis auctor elit sed. Et malesuada fames ac turpis egestas.
           </p>
           <a href="#" class="btn btn--green">Book Now</a>
         </div>
       </div>
     </div>
   </main>
+  <script>
+    const ref = document.querySelector('#popup');
+    ref.addEventListener('click', (e) => {
+      if (e.target === ref) location.href = '#section-stories';
+    });
+  </script>
 </body>
 </html>
