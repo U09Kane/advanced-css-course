@@ -12,3 +12,27 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+// Screen Size Media Queries
+/*  [Desktop First Approach]
+0px     - 600px     Mobile
+601px   - 900px     Tablet (Portrait)
+901px   - 1200px    Tablet (Landscape)
+1201px  - 1800px    Desktop
+1801px  - ~~~       Desktop (Ultrawide)
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) { @content }; // 600px
+    }
+    @if $breakpoint == tab-port {
+        @media (max-width: 56.25em) { @content }; // 900px
+    }
+    @if $breakpoint == tab-land {
+        @media (max-width: 75em) { @content }; // 1200px
+    }
+    @if $breakpoint == desktop-big {
+        @media (min-width: 112.5em) { @content }; // 1800px
+    }
+}
